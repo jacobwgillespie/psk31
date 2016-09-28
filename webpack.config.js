@@ -1,5 +1,6 @@
 const path = require('path');
 const HappyPack = require('happypack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 const rootPath = __dirname;
@@ -41,6 +42,7 @@ const config = {
     new HappyPack({ id: 'js' }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+    new HtmlWebpackPlugin(),
   ],
 };
 
