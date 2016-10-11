@@ -1,10 +1,10 @@
 import VARICODE from './varicode';
 
 export const messageToBits = message =>
-  message.split('').reduce(
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].concat(message.split('').reduce(
     (bits, character) => bits.concat(VARICODE[character] || []).concat([0, 0]),
     []
-  ).concat([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+  )).concat([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
 
 export const bitsToPhases = (bits) => {
   const phases = [0, 1, 1, 0, 0, 1]; // 000

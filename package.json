@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --progress --colors",
+    "dev": "webpack-dev-server",
     "watch": "npm run build -- --watch"
   },
   "devDependencies": {
@@ -19,6 +20,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "chokidar": "^1.6.0",
     "happypack": "^2.2.1"
   }
 }
