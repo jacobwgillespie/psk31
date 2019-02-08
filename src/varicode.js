@@ -127,10 +127,13 @@ const VARICODE = {
   '}': 1010110101,
   '~': 1011010111,
   '\x7F': 1110110101, // DEL
-};
+}
 
-Object.keys(VARICODE).forEach((character) => {
-  VARICODE[character] = VARICODE[character].toString(10).split('').map(c => parseInt(c, 10));
-});
+Object.keys(VARICODE).forEach(character => {
+  VARICODE[character] = VARICODE[character]
+    .toString(10)
+    .split('')
+    .map(c => parseInt(c, 10))
+})
 
-export default VARICODE;
+export default VARICODE
